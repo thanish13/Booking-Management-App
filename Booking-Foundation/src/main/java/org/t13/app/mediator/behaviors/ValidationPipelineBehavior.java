@@ -1,12 +1,13 @@
 package org.t13.app.mediator.behaviors;
 
-import buildingblocks.core.exception.ValidationException;
-import buildingblocks.mediator.abstractions.requests.IPipelineBehavior;
-import buildingblocks.mediator.abstractions.requests.IRequest;
-import buildingblocks.mediator.abstractions.requests.RequestHandlerDelegate;
+
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.DataBinder;
 import org.springframework.validation.Validator;
+import org.t13.app.core.exception.ValidationException;
+import org.t13.app.mediator.abstractions.requests.IPipelineBehavior;
+import org.t13.app.mediator.abstractions.requests.IRequest;
+import org.t13.app.mediator.abstractions.requests.RequestHandlerDelegate;
 
 import java.util.List;
 

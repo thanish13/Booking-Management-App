@@ -1,8 +1,9 @@
 package org.t13.app.mediator.abstractions;
 
-import buildingblocks.mediator.abstractions.commands.ICommand;
-import buildingblocks.mediator.abstractions.queries.IQuery;
-import buildingblocks.mediator.abstractions.requests.IRequest;
+
+import org.t13.app.mediator.abstractions.commands.ICommand;
+import org.t13.app.mediator.abstractions.queries.IQuery;
+import org.t13.app.mediator.abstractions.requests.IRequest;
 
 public interface ISender {
 

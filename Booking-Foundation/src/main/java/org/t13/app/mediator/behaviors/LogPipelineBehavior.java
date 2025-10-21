@@ -1,10 +1,11 @@
 package org.t13.app.mediator.behaviors;
 
-import buildingblocks.mediator.abstractions.requests.IPipelineBehavior;
-import buildingblocks.mediator.abstractions.requests.IRequest;
-import buildingblocks.mediator.abstractions.requests.RequestHandlerDelegate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.t13.app.mediator.abstractions.requests.IPipelineBehavior;
+import org.t13.app.mediator.abstractions.requests.IRequest;
+import org.t13.app.mediator.abstractions.requests.RequestHandlerDelegate;
 
 public class LogPipelineBehavior<TRequest extends IRequest<TResponse>, TResponse>
         implements IPipelineBehavior<TRequest, TResponse> {

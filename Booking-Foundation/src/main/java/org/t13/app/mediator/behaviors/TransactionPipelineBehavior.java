@@ -1,13 +1,14 @@
 package org.t13.app.mediator.behaviors;
 
-import buildingblocks.core.event.DomainEvent;
-import buildingblocks.core.event.EventDispatcher;
-import buildingblocks.mediator.abstractions.requests.IPipelineBehavior;
-import buildingblocks.mediator.abstractions.requests.IRequest;
-import buildingblocks.mediator.abstractions.requests.RequestHandlerDelegate;
+
 import org.slf4j.Logger;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
+import org.t13.app.core.event.DomainEvent;
+import org.t13.app.core.event.EventDispatcher;
+import org.t13.app.mediator.abstractions.requests.IPipelineBehavior;
+import org.t13.app.mediator.abstractions.requests.IRequest;
+import org.t13.app.mediator.abstractions.requests.RequestHandlerDelegate;
 
 import java.util.List;
 
