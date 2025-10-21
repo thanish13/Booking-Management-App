@@ -1,7 +1,9 @@
 package org.t13.app.core.exception;
 
+import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
+@Getter
 public class CustomException extends RuntimeException {
     private final HttpStatus statusCode;
     private final Integer code;
@@ -56,11 +58,4 @@ public class CustomException extends RuntimeException {
         this.code = code;
     }
 
-    public HttpStatus getStatusCode() {
-        return statusCode;
-    }
-
-    public Integer getCode() {
-        return code;
-    }
 }

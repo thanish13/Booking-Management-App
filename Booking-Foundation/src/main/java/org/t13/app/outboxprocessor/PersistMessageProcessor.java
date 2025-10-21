@@ -1,8 +1,8 @@
 package org.t13.app.outboxprocessor;
 
-import buildingblocks.core.event.IntegrationEvent;
-import buildingblocks.core.event.InternalCommand;
 import org.springframework.amqp.core.Message;
+import org.t13.app.core.event.IntegrationEvent;
+import org.t13.app.core.event.InternalCommand;
 
 import java.util.UUID;
 

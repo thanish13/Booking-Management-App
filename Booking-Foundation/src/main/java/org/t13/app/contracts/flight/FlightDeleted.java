@@ -1,7 +1,7 @@
 package org.t13.app.contracts.flight;
 
-import buildingblocks.core.event.IntegrationEvent;
 
+import org.t13.app.core.event.IntegrationEvent;
 import java.util.UUID;
 
 
