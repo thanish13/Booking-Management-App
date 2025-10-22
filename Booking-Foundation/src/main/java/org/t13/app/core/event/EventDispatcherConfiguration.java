@@ -1,10 +1,10 @@
 package org.t13.app.core.event;
 
-import buildingblocks.outboxprocessor.PersistMessageProcessor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.t13.app.outboxprocessor.PersistMessageProcessor;
 
 @Configuration
 public class EventDispatcherConfiguration {

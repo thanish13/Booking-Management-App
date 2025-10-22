@@ -1,2 +1,12 @@
 /.idea/
 /Booking-Gateway/target/
+/Booking-Foundation/target/
+/Booking-Foundation/target/maven-archiver/
+/Booking-Foundation/target/maven-status/
+/Booking-Foundation/target/classes
+/Booking-Foundation/target/*
+
+
+
+
+

@@ -1,12 +1,12 @@
 package org.t13.app.core.event;
 
-import org.springframework.util.ReflectionUtils;
 import org.t13.app.core.model.AggregateRoot;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Component;
 import org.t13.app.outboxprocessor.PersistMessageProcessor;
 import org.t13.app.outboxprocessor.PersistMessageProcessorConfiguration;
+import org.t13.app.utils.reflection.ReflectionUtils;
 
 import java.util.List;
 import java.util.Objects;
