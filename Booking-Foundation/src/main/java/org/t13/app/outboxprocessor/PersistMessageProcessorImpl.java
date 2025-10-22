@@ -1,14 +1,5 @@
 package org.t13.app.outboxprocessor;
 
-import buildingblocks.core.event.IntegrationEvent;
-import buildingblocks.core.event.InternalCommand;
-import buildingblocks.jpa.JpaConfiguration;
-import buildingblocks.logger.LoggerConfiguration;
-import buildingblocks.mediator.abstractions.IMediator;
-import buildingblocks.mediator.abstractions.commands.ICommand;
-import buildingblocks.rabbitmq.RabbitmqConfiguration;
-import buildingblocks.utils.jsonconverter.JsonConverterUtils;
-import buildingblocks.utils.reflection.ReflectionUtils;
 import com.github.f4b6a3.uuid.UuidCreator;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
@@ -20,6 +11,15 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.boot.autoconfigure.amqp.RabbitProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.t13.app.core.event.IntegrationEvent;
+import org.t13.app.core.event.InternalCommand;
+import org.t13.app.jpa.JpaConfiguration;
+import org.t13.app.logger.LoggerConfiguration;
+import org.t13.app.mediator.abstractions.IMediator;
+import org.t13.app.mediator.abstractions.commands.ICommand;
+import org.t13.app.rabbitmq.RabbitmqConfiguration;
+import org.t13.app.utils.jsonconverter.JsonConverterUtils;
+import org.t13.app.utils.reflection.ReflectionUtils;
 
 import java.util.List;
 import java.util.UUID;

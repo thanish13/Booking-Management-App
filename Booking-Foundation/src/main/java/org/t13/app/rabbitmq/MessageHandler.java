@@ -1,9 +1,9 @@
 package org.t13.app.rabbitmq;
 
-import buildingblocks.utils.jsonconverter.JsonConverterUtils;
-import buildingblocks.utils.reflection.ReflectionUtils;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageListener;
+import org.t13.app.utils.jsonconverter.JsonConverterUtils;
+import org.t13.app.utils.reflection.ReflectionUtils;
 
 public interface MessageHandler<T> extends MessageListener {
   /**

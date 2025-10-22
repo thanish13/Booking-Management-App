@@ -1,11 +1,5 @@
 package org.t13.app.mediator;
 
-import buildingblocks.core.event.EventDispatcher;
-import buildingblocks.mediator.abstractions.IMediator;
-import buildingblocks.mediator.abstractions.requests.IRequest;
-import buildingblocks.mediator.behaviors.LogPipelineBehavior;
-import buildingblocks.mediator.behaviors.TransactionPipelineBehavior;
-import buildingblocks.mediator.behaviors.ValidationPipelineBehavior;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -18,6 +12,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.validation.Validator;
+import org.t13.app.core.event.EventDispatcher;
+import org.t13.app.mediator.abstractions.IMediator;
+import org.t13.app.mediator.abstractions.requests.IRequest;
+import org.t13.app.mediator.behaviors.LogPipelineBehavior;
+import org.t13.app.mediator.behaviors.TransactionPipelineBehavior;
+import org.t13.app.mediator.behaviors.ValidationPipelineBehavior;
 
 import java.util.List;
 

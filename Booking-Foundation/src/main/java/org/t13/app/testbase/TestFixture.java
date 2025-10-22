@@ -1,10 +1,6 @@
 package org.t13.app.testbase;
 
-import buildingblocks.mediator.abstractions.IMediator;
-import buildingblocks.mediator.abstractions.commands.ICommand;
-import buildingblocks.mediator.abstractions.queries.IQuery;
-import buildingblocks.mediator.abstractions.requests.IRequest;
-import buildingblocks.outboxprocessor.PersistMessageProcessor;
+
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
@@ -16,6 +12,11 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.client.RestTemplate;
+import org.t13.app.mediator.abstractions.IMediator;
+import org.t13.app.mediator.abstractions.commands.ICommand;
+import org.t13.app.mediator.abstractions.queries.IQuery;
+import org.t13.app.mediator.abstractions.requests.IRequest;
+import org.t13.app.outboxprocessor.PersistMessageProcessor;
 
 import java.time.Duration;
 import java.time.Instant;

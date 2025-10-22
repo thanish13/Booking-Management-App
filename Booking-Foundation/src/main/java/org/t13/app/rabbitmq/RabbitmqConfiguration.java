@@ -1,9 +1,6 @@
 package org.t13.app.rabbitmq;
 
-import buildingblocks.outboxprocessor.MessageDeliveryType;
-import buildingblocks.outboxprocessor.PersistMessageEntity;
-import buildingblocks.outboxprocessor.PersistMessageProcessor;
-import buildingblocks.utils.reflection.ReflectionUtils;
+
 import org.slf4j.Logger;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.AsyncRabbitTemplate;
@@ -20,6 +17,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
+import org.t13.app.outboxprocessor.MessageDeliveryType;
+import org.t13.app.outboxprocessor.PersistMessageEntity;
+import org.t13.app.outboxprocessor.PersistMessageProcessor;
+import org.t13.app.utils.reflection.ReflectionUtils;
 
 import java.util.HashMap;
 import java.util.Map;

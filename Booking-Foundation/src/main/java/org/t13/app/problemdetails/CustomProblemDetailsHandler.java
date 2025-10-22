@@ -1,10 +1,6 @@
 package org.t13.app.problemdetails;
 
-import buildingblocks.core.exception.BadRequestException;
-import buildingblocks.core.exception.ConflictException;
-import buildingblocks.core.exception.NotFoundException;
-import buildingblocks.core.exception.ValidationException;
-import buildingblocks.utils.jsonconverter.JsonConverterUtils;
+
 import jakarta.persistence.OptimisticLockException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +12,11 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import org.t13.app.core.exception.BadRequestException;
+import org.t13.app.core.exception.ConflictException;
+import org.t13.app.core.exception.NotFoundException;
+import org.t13.app.core.exception.ValidationException;
+import org.t13.app.utils.jsonconverter.JsonConverterUtils;
 
 import java.net.URI;
 import java.time.Instant;

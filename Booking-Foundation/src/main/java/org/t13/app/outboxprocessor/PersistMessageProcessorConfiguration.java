@@ -1,7 +1,5 @@
 package org.t13.app.outboxprocessor;
 
-import buildingblocks.mediator.MediatorConfiguration;
-import buildingblocks.mediator.abstractions.IMediator;
 import jakarta.persistence.EntityManager;
 import org.slf4j.Logger;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -12,6 +10,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.TaskScheduler;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.t13.app.mediator.MediatorConfiguration;
+import org.t13.app.mediator.abstractions.IMediator;
 
 
 @Configuration
