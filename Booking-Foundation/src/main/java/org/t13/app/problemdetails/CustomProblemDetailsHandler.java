@@ -1,6 +1,5 @@
 package org.t13.app.problemdetails;
 
-
 import jakarta.persistence.OptimisticLockException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
