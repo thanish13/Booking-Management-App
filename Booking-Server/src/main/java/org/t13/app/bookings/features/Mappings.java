@@ -2,8 +2,12 @@ package org.t13.app.bookings.features;
 
 import com.github.f4b6a3.uuid.UuidCreator;
 import flight.Flight;
+import org.t13.app.bookings.features.createbooking.CreateBookingCommand;
+import org.t13.app.bookings.features.createbooking.CreateBookingMongoCommand;
+import org.t13.app.bookings.features.createbooking.CreateBookingRequestDto;
 import org.t13.app.bookings.modles.Booking;
 import org.t13.app.data.jpa.entities.BookingEntity;
+import org.t13.app.data.mongo.documents.BookingDocument;
 
 
 public final class Mappings {

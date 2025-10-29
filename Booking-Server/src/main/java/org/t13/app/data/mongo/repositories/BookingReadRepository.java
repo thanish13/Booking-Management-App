@@ -1,9 +1,8 @@
 package org.t13.app.data.mongo.repositories;
 
-import io.bookingmicroservices.booking.data.mongo.documents.BookingDocument;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
-
+import org.t13.app.data.mongo.documents.BookingDocument;
 import java.util.UUID;
 
 

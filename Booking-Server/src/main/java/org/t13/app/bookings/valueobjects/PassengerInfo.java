@@ -1,7 +1,10 @@
 package org.t13.app.bookings.valueobjects;
 
-import buildingblocks.utils.validation.ValidationUtils;
 import jakarta.persistence.Embeddable;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.t13.app.utils.validation.ValidationUtils;
 
 @Embeddable
 @EqualsAndHashCode
@@ -12,7 +15,6 @@ public class PassengerInfo {
 
     public PassengerInfo(String name) {
         ValidationUtils.notBeNullOrEmpty(name);
-
         this.name = name;
     }
 }

@@ -1,8 +1,8 @@
 package org.t13.app.data.jpa.repositories;
 
-import io.bookingmicroservices.booking.data.jpa.entities.BookingEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import org.t13.app.data.jpa.entities.BookingEntity;
 
 import java.util.UUID;
 

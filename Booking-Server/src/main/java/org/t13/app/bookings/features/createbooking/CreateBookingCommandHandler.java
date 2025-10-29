@@ -1,30 +1,15 @@
 package org.t13.app.bookings.features.createbooking;
 
-import buildingblocks.mediator.abstractions.commands.ICommandHandler;
-import buildingblocks.utils.protobuf.ProtobufUtils;
-import flight.Flight;
-import flight.FlightServiceGrpc;
-import io.bookingmicroservices.booking.bookings.dtos.BookingDto;
-import io.bookingmicroservices.booking.bookings.exceptions.BookingAlreadyExistException;
-import io.bookingmicroservices.booking.bookings.exceptions.FlightNotFoundException;
-import io.bookingmicroservices.booking.bookings.exceptions.PassengerNotFoundException;
-import io.bookingmicroservices.booking.bookings.exceptions.SeatNumberIsNotAvailableException;
-import io.bookingmicroservices.booking.bookings.features.Mappings;
-import io.bookingmicroservices.booking.bookings.modles.Booking;
-import io.bookingmicroservices.booking.bookings.valueobjects.BookingId;
-import io.bookingmicroservices.booking.bookings.valueobjects.PassengerInfo;
-import io.bookingmicroservices.booking.bookings.valueobjects.Trip;
-import io.bookingmicroservices.booking.data.jpa.entities.BookingEntity;
-import io.bookingmicroservices.booking.data.jpa.repositories.BookingRepository;
+
 import org.springframework.stereotype.Service;
-import passenger.Passenger;
-import passenger.PassengerServiceGrpc;
+import org.t13.app.bookings.dtos.BookingDto;
+import org.t13.app.data.jpa.repositories.BookingRepository;
+import org.t13.app.mediator.abstractions.commands.ICommandHandler;
 
 import java.math.BigDecimal;
 import java.util.Objects;
 import java.util.UUID;
 
-import static io.bookingmicroservices.booking.bookings.features.Mappings.*;
 
 @Service
 public class CreateBookingCommandHandler implements ICommandHandler<CreateBookingCommand, BookingDto> {
@@ -45,7 +30,7 @@ public class CreateBookingCommandHandler implements ICommandHandler<CreateBookin
     @Override
     public BookingDto handle(CreateBookingCommand command) {
 
-       Flight.GetByIdRequestDto.newBuilder().setId(command.flightId().toString()).build();
+        Flight.GetByIdRequestDto.newBuilder().setId(command.flightId().toString()).build();
 
         Flight.FlightResponseDto flight = flightServiceBlockingStub.getById(toFlightGetByIdRequestDto(command));
 

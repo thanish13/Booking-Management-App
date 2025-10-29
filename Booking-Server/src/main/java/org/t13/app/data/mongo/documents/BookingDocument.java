@@ -1,13 +1,13 @@
 package org.t13.app.data.mongo.documents;
 
-import io.bookingmicroservices.booking.bookings.valueobjects.PassengerInfo;
-import io.bookingmicroservices.booking.bookings.valueobjects.Trip;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.t13.app.bookings.valueobjects.PassengerInfo;
+import org.t13.app.bookings.valueobjects.Trip;
 
 import java.util.UUID;
 
