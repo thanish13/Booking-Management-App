@@ -1,16 +1,17 @@
 package org.t13.app;
 
-import buildingblocks.contracts.booking.BookingCreated;
-import buildingblocks.core.event.DomainEvent;
-import buildingblocks.core.event.EventMapper;
-import buildingblocks.core.event.IntegrationEvent;
-import buildingblocks.core.event.InternalCommand;
-import io.bookingmicroservices.booking.bookings.features.createbooking.BookingCreatedDomainEvent;
-import io.bookingmicroservices.booking.bookings.features.createbooking.CreateBookingMongoCommand;
 import org.springframework.stereotype.Component;
+import org.t13.app.bookings.features.createbooking.BookingCreatedDomainEvent;
+import org.t13.app.bookings.features.createbooking.CreateBookingMongoCommand;
+import org.t13.app.contracts.booking.BookingCreated;
+import org.t13.app.core.event.DomainEvent;
+import org.t13.app.core.event.EventMapper;
+import org.t13.app.core.event.IntegrationEvent;
+import org.t13.app.core.event.InternalCommand;
 
 @Component
 public class EventMapperImpl implements EventMapper {
+
     @Override
     public IntegrationEvent MapToIntegrationEvent(DomainEvent event) {
         return switch (event) {

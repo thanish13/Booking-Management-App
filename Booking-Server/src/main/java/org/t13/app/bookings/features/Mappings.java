@@ -2,13 +2,8 @@ package org.t13.app.bookings.features;
 
 import com.github.f4b6a3.uuid.UuidCreator;
 import flight.Flight;
-import io.bookingmicroservices.booking.bookings.dtos.BookingDto;
-import io.bookingmicroservices.booking.bookings.features.createbooking.CreateBookingCommand;
-import io.bookingmicroservices.booking.bookings.features.createbooking.CreateBookingMongoCommand;
-import io.bookingmicroservices.booking.bookings.features.createbooking.CreateBookingRequestDto;
-import io.bookingmicroservices.booking.bookings.modles.Booking;
-import io.bookingmicroservices.booking.data.jpa.entities.BookingEntity;
-import io.bookingmicroservices.booking.data.mongo.documents.BookingDocument;
+import org.t13.app.bookings.modles.Booking;
+import org.t13.app.data.jpa.entities.BookingEntity;
 
 
 public final class Mappings {

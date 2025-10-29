@@ -1,12 +1,10 @@
 package org.t13.app.grpcclient;
 
-import flight.FlightServiceGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import net.devh.boot.grpc.client.config.GrpcChannelsProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import passenger.PassengerServiceGrpc;
 
 
 @Configuration

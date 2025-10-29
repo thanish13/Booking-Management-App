@@ -1,8 +1,9 @@
 package org.t13.app.bookings.features.createbooking;
 
-import buildingblocks.core.event.DomainEvent;
-import io.bookingmicroservices.booking.bookings.valueobjects.PassengerInfo;
-import io.bookingmicroservices.booking.bookings.valueobjects.Trip;
+
+import org.t13.app.bookings.valueobjects.PassengerInfo;
+import org.t13.app.bookings.valueobjects.Trip;
+import org.t13.app.core.event.DomainEvent;
 
 import java.util.UUID;
 
