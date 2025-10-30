@@ -1,6 +1,6 @@
 package org.t13.app.seats.exceptions;
 
-import buildingblocks.core.exception.BadRequestException;
+import org.t13.app.core.exception.BadRequestException;
 
 public class SeatNumberAlreadyReservedException extends BadRequestException {
   public SeatNumberAlreadyReservedException() {

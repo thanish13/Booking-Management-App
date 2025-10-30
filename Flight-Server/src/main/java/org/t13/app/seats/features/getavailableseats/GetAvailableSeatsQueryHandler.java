@@ -1,6 +1,6 @@
 package org.t13.app.seats.features.getavailableseats;
 
-import buildingblocks.mediator.abstractions.queries.IQueryHandler;
+import org.t13.app.mediator.abstractions.queries.IQueryHandler;
 import org.t13.app.data.mongo.documents.SeatDocument;
 import org.t13.app.data.mongo.repositories.SeatReadRepository;
 import org.t13.app.seats.dtos.SeatDto;

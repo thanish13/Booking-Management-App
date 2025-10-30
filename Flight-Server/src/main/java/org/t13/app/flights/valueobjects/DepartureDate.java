@@ -1,6 +1,6 @@
 package org.t13.app.flights.valueobjects;
 
-import buildingblocks.utils.validation.ValidationUtils;
+import org.t13.app.utils.validation.ValidationUtils;
 import jakarta.persistence.Embeddable;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

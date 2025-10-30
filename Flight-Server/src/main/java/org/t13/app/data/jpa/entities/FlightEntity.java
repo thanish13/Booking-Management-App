@@ -1,10 +1,9 @@
 package org.t13.app.data.jpa.entities;
 
-import buildingblocks.core.model.BaseEntity;
+import org.t13.app.core.model.BaseEntity;
 import org.t13.app.aircrafts.valueobjects.AircraftId;
 import org.t13.app.airports.valueobjects.AirportId;
 import org.t13.app.flights.enums.FlightStatus;
-import io.bookingmicroservices.flight.flights.valueobjects.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

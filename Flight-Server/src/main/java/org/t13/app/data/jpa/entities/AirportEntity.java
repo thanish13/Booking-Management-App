@@ -1,6 +1,6 @@
 package org.t13.app.data.jpa.entities;
 
-import buildingblocks.core.model.BaseEntity;
+import org.t13.app.core.model.BaseEntity;
 import org.t13.app.airports.valueobjects.Address;
 import org.t13.app.airports.valueobjects.Code;
 import org.t13.app.airports.valueobjects.Name;

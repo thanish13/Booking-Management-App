@@ -1,14 +1,31 @@
 package org.t13.app.bookings.features.createbooking;
 
 
+import flight.Flight;
+import flight.FlightServiceGrpc;
 import org.springframework.stereotype.Service;
 import org.t13.app.bookings.dtos.BookingDto;
+import org.t13.app.bookings.exceptions.BookingAlreadyExistException;
+import org.t13.app.bookings.exceptions.FlightNotFoundException;
+import org.t13.app.bookings.exceptions.PassengerNotFoundException;
+import org.t13.app.bookings.exceptions.SeatNumberIsNotAvailableException;
+import org.t13.app.bookings.features.Mappings;
+import org.t13.app.bookings.modles.Booking;
+import org.t13.app.bookings.valueobjects.BookingId;
+import org.t13.app.bookings.valueobjects.PassengerInfo;
+import org.t13.app.bookings.valueobjects.Trip;
+import org.t13.app.data.jpa.entities.BookingEntity;
 import org.t13.app.data.jpa.repositories.BookingRepository;
 import org.t13.app.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.utils.protobuf.ProtobufUtils;
+import passenger.Passenger;
+import passenger.PassengerServiceGrpc;
 
 import java.math.BigDecimal;
 import java.util.Objects;
 import java.util.UUID;
+
+import static org.t13.app.bookings.features.Mappings.*;
 
 
 @Service

@@ -1,6 +1,5 @@
 package org.t13.app.aircrafts.features.createaircraft;
 
-import buildingblocks.mediator.abstractions.IMediator;
 import org.t13.app.aircrafts.dtos.AircraftDto;
 import org.t13.app.aircrafts.features.Mappings;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -10,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.t13.app.mediator.abstractions.IMediator;
 
 @RestController
 @RequestMapping(path = "api/v1/flight/aircraft")

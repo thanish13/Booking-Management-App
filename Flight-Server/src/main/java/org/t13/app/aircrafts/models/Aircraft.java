@@ -1,6 +1,6 @@
 package org.t13.app.aircrafts.models;
 
-import buildingblocks.core.model.AggregateRoot;
+import org.t13.app.core.model.AggregateRoot;
 import org.t13.app.aircrafts.features.createaircraft.AircraftCreatedDomainEvent;
 import org.t13.app.aircrafts.valueobjects.AircraftId;
 import org.t13.app.aircrafts.valueobjects.ManufacturingYear;

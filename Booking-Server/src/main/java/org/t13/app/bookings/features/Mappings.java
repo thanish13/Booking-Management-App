@@ -2,6 +2,7 @@ package org.t13.app.bookings.features;
 
 import com.github.f4b6a3.uuid.UuidCreator;
 import flight.Flight;
+import org.t13.app.bookings.dtos.BookingDto;
 import org.t13.app.bookings.features.createbooking.CreateBookingCommand;
 import org.t13.app.bookings.features.createbooking.CreateBookingMongoCommand;
 import org.t13.app.bookings.features.createbooking.CreateBookingRequestDto;

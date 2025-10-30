@@ -1,6 +1,6 @@
 package org.t13.app.flights.exceptions;
 
-import buildingblocks.core.exception.ConflictException;
+import org.t13.app.core.exception.ConflictException;
 
 public class FlightAlreadyExistException extends ConflictException {
     public FlightAlreadyExistException() {

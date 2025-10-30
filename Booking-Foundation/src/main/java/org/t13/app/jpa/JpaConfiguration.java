@@ -50,7 +50,7 @@ public class JpaConfiguration {
         factoryBean.setDataSource(dataSource);
 
         // Set packages to scan from configuration
-        factoryBean.setPackagesToScan(entityPackagesToScan, "buildingblocks");
+        factoryBean.setPackagesToScan(entityPackagesToScan, "org.t13.app");
 
         // Set JPA vendor adapter
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();

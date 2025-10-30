@@ -13,7 +13,6 @@ import org.t13.app.data.jpa.entities.AirportEntity;
 import org.t13.app.data.jpa.entities.FlightEntity;
 import org.t13.app.data.jpa.entities.SeatEntity;
 import org.t13.app.flights.enums.FlightStatus;
-import io.bookingmicroservices.flight.flights.valueobjects.*;
 import org.t13.app.flights.valueobjects.*;
 import org.t13.app.seats.enums.SeatClass;
 import org.t13.app.seats.enums.SeatType;

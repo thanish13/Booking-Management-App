@@ -1,6 +1,6 @@
 package org.t13.app.flights.features.createflight;
 
-import buildingblocks.mediator.abstractions.IMediator;
+import org.t13.app.mediator.abstractions.IMediator;
 import org.t13.app.flights.dtos.FlightDto;
 import org.t13.app.flights.features.Mappings;
 import io.swagger.v3.oas.annotations.tags.Tag;

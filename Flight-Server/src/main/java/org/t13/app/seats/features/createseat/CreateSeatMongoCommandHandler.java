@@ -1,7 +1,7 @@
 package org.t13.app.seats.features.createseat;
 
-import buildingblocks.mediator.abstractions.commands.ICommandHandler;
-import buildingblocks.mediator.abstractions.requests.Unit;
+import org.t13.app.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.mediator.abstractions.requests.Unit;
 import org.t13.app.data.mongo.documents.SeatDocument;
 import org.t13.app.data.mongo.repositories.SeatReadRepository;
 import org.t13.app.seats.exceptions.SeatAlreadyExistException;

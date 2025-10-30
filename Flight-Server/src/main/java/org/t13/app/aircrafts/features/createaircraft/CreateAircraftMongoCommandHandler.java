@@ -1,7 +1,7 @@
 package org.t13.app.aircrafts.features.createaircraft;
 
-import buildingblocks.mediator.abstractions.commands.ICommandHandler;
-import buildingblocks.mediator.abstractions.requests.Unit;
+import org.t13.app.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.mediator.abstractions.requests.Unit;
 import org.t13.app.aircrafts.exceptions.AircraftAlreadyExistException;
 import org.t13.app.aircrafts.features.Mappings;
 import org.t13.app.data.mongo.documents.AircraftDocument;

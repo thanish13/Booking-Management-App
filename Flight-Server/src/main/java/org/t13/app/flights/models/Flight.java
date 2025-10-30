@@ -1,13 +1,12 @@
 package org.t13.app.flights.models;
 
-import buildingblocks.core.model.AggregateRoot;
+import org.t13.app.core.model.AggregateRoot;
 import org.t13.app.aircrafts.valueobjects.AircraftId;
 import org.t13.app.airports.valueobjects.AirportId;
 import org.t13.app.flights.enums.FlightStatus;
 import org.t13.app.flights.features.createflight.FlightCreatedDomainEvent;
 import org.t13.app.flights.features.deleteflight.FlightDeletedDomainEvent;
 import org.t13.app.flights.features.updateflight.FlightUpdatedDomainEvent;
-import io.bookingmicroservices.flight.flights.valueobjects.*;
 import lombok.*;
 import org.t13.app.flights.valueobjects.*;
 

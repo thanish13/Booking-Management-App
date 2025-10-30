@@ -1,6 +1,6 @@
 package org.t13.app.flights.features.createflight;
 
-import buildingblocks.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.mediator.abstractions.commands.ICommandHandler;
 import org.t13.app.aircrafts.valueobjects.AircraftId;
 import org.t13.app.airports.valueobjects.AirportId;
 import org.t13.app.data.jpa.entities.FlightEntity;
@@ -9,7 +9,6 @@ import org.t13.app.flights.dtos.FlightDto;
 import org.t13.app.flights.exceptions.FlightAlreadyExistException;
 import org.t13.app.flights.features.Mappings;
 import org.t13.app.flights.models.Flight;
-import io.bookingmicroservices.flight.flights.valueobjects.*;
 import org.springframework.stereotype.Service;
 import org.t13.app.flights.valueobjects.*;
 

@@ -1,6 +1,6 @@
 package org.t13.app.airports.exceptions;
 
-import buildingblocks.core.exception.BadRequestException;
+import org.t13.app.core.exception.BadRequestException;
 
 import java.util.UUID;
 

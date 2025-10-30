@@ -1,6 +1,6 @@
 package org.t13.app.flights.features;
 
-import buildingblocks.utils.protobuf.ProtobufUtils;
+import org.t13.app.utils.protobuf.ProtobufUtils;
 import com.github.f4b6a3.uuid.UuidCreator;
 import org.t13.app.aircrafts.valueobjects.AircraftId;
 import org.t13.app.airports.valueobjects.AirportId;
@@ -16,7 +16,6 @@ import org.t13.app.flights.features.updateflight.UpdateFlightCommand;
 import org.t13.app.flights.features.updateflight.UpdateFlightMongoCommand;
 import org.t13.app.flights.features.updateflight.UpdateFlightRequestDto;
 import org.t13.app.flights.models.Flight;
-import io.bookingmicroservices.flight.flights.valueobjects.*;
 import org.bson.types.ObjectId;
 import org.t13.app.flights.valueobjects.*;
 

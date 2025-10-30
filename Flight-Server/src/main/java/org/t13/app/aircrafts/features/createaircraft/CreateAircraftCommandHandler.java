@@ -1,6 +1,5 @@
 package org.t13.app.aircrafts.features.createaircraft;
 
-import buildingblocks.mediator.abstractions.commands.ICommandHandler;
 import org.t13.app.aircrafts.dtos.AircraftDto;
 import org.t13.app.aircrafts.exceptions.AircraftAlreadyExistException;
 import org.t13.app.aircrafts.features.Mappings;
@@ -12,6 +11,7 @@ import org.t13.app.aircrafts.valueobjects.Name;
 import org.t13.app.data.jpa.entities.AircraftEntity;
 import org.t13.app.data.jpa.repositories.AircraftRepository;
 import org.springframework.stereotype.Service;
+import org.t13.app.mediator.abstractions.commands.ICommandHandler;
 
 @Service
 public class CreateAircraftCommandHandler implements ICommandHandler<CreateAircraftCommand, AircraftDto> {

@@ -1,10 +1,10 @@
 package org.t13.app;
 
-import buildingblocks.contracts.flight.*;
-import buildingblocks.core.event.EventMapper;
-import buildingblocks.core.event.DomainEvent;
-import buildingblocks.core.event.IntegrationEvent;
-import buildingblocks.core.event.InternalCommand;
+import org.t13.app.contracts.flight.*;
+import org.t13.app.core.event.EventMapper;
+import org.t13.app.core.event.DomainEvent;
+import org.t13.app.core.event.IntegrationEvent;
+import org.t13.app.core.event.InternalCommand;
 import org.t13.app.aircrafts.features.createaircraft.AircraftCreatedDomainEvent;
 import org.t13.app.aircrafts.features.createaircraft.CreateAircraftMongoCommand;
 import org.t13.app.airports.features.createairport.AirportCreatedDomainEvent;
