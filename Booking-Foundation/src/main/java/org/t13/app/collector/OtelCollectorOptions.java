@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "spring.otel.collector")
 @Getter
 @Setter
-@ConditionalOnMissingBean
 public class OtelCollectorOptions {
     private String endpoint;
     private String serviceName;

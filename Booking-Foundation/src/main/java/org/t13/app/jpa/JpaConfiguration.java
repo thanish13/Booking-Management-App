@@ -28,8 +28,7 @@ public class JpaConfiguration {
     private String entityPackagesToScan;
 
     @Bean
-    @ConditionalOnMissingBean
-    public DataSource dataSource(DataSourceProperties dataSourceProperties) {
+    public DataSource dataSource( DataSourceProperties dataSourceProperties) {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(dataSourceProperties.getDriverClassName());
         dataSource.setUrl(dataSourceProperties.getUrl());

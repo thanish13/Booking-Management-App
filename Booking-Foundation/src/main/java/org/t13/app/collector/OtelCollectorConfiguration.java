@@ -18,11 +18,13 @@ import io.opentelemetry.sdk.trace.export.BatchSpanProcessor;
 import io.opentelemetry.semconv.resource.attributes.ResourceAttributes;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class OtelCollectorConfiguration {
 
     @Bean
+    @Primary
     public OtelCollectorOptions openTelemetryCollectorOptions() {
         return new OtelCollectorOptions();
     }

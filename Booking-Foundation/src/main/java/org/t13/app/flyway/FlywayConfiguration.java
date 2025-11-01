@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import(FlywayProperties.class)
 public class FlywayConfiguration {
 
     private final FlywayProperties flywayProperties;
