@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings;
 import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -28,6 +29,7 @@ public class JpaConfiguration {
     private String entityPackagesToScan;
 
     @Bean
+    @Profile("!test")
     public DataSource dataSource( DataSourceProperties dataSourceProperties) {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(dataSourceProperties.getDriverClassName());
@@ -38,6 +40,7 @@ public class JpaConfiguration {
     }
 
     @Bean
+    @Profile("!test")
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(
             DataSource dataSource,
             JpaProperties jpaProperties,
@@ -66,11 +69,13 @@ public class JpaConfiguration {
     }
 
     @Bean
+    @Profile("!test")
     public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
         return new JpaTransactionManager(entityManagerFactory);
     }
 
     @Bean
+    @Profile("!test")
     public AuditorAware<Long> auditorAware() {
         return new JpaAuditorAwareImpl();
     }
