@@ -1,11 +1,13 @@
 package org.t13.app.foundation.jpa;
 
 import jakarta.persistence.EntityManagerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings;
 import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -27,9 +29,15 @@ public class JpaConfiguration {
     @Value("${spring.jpa.entity-packages-to-scan}")
     private String entityPackagesToScan;
 
+    @Bean("dataSource")
+    @ConfigurationProperties("${spring.datasource}")
+    public DataSourceProperties dataSourceProperties(){
+        return this.dataSourceProperties();
+    };
+
     @Bean
     @Profile("!test")
-    public DataSource dataSource( DataSourceProperties dataSourceProperties) {
+    public DataSource dataSource(@Qualifier("dataSource") DataSourceProperties dataSourceProperties) {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(dataSourceProperties.getDriverClassName());
         dataSource.setUrl(dataSourceProperties.getUrl());

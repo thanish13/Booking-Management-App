@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.t13.app.foundation.collector.OtelCollectorConfiguration;
 import org.t13.app.foundation.core.event.EventDispatcherConfiguration;
+import org.t13.app.foundation.flyway.FlywayConfiguration;
 import org.t13.app.foundation.jpa.JpaConfiguration;
 import org.t13.app.foundation.keycloak.KeycloakConfiguration;
 import org.t13.app.foundation.logger.LoggerConfiguration;

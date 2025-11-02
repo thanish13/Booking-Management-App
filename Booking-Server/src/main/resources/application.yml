@@ -5,7 +5,7 @@ spring:
     name: booking
 
   main:
-    allow-circular-references: false
+    allow-circular-references: true
     allow-bean-definition-overriding: true
 
   mvc:
@@ -33,6 +33,9 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/booking_read
       database: booking_read
+
+  flyway:
+    enabled: false
 
   rabbitmq:
     host: localhost
