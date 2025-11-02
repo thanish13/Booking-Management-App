@@ -5,8 +5,8 @@ import org.t13.app.bookings.exceptions.BookingAlreadyExistException;
 import org.t13.app.bookings.features.Mappings;
 import org.t13.app.data.mongo.documents.BookingDocument;
 import org.t13.app.data.mongo.repositories.BookingReadRepository;
-import org.t13.app.mediator.abstractions.commands.ICommandHandler;
-import org.t13.app.mediator.abstractions.requests.Unit;
+import org.t13.app.foundation.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.foundation.mediator.abstractions.requests.Unit;
 
 @Service
 public class CreateBookingMongoCommandHandler implements ICommandHandler<CreateBookingMongoCommand, Unit> {

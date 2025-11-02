@@ -1,6 +1,6 @@
 package org.t13.app.flights.features.createflight;
 
-import org.t13.app.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.foundation.mediator.abstractions.commands.ICommandHandler;
 import org.t13.app.aircrafts.valueobjects.AircraftId;
 import org.t13.app.airports.valueobjects.AirportId;
 import org.t13.app.data.jpa.entities.FlightEntity;

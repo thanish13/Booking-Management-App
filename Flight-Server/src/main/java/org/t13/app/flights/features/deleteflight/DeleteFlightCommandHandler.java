@@ -1,6 +1,6 @@
 package org.t13.app.flights.features.deleteflight;
 
-import org.t13.app.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.foundation.mediator.abstractions.commands.ICommandHandler;
 import org.t13.app.data.jpa.entities.FlightEntity;
 import org.t13.app.data.jpa.repositories.FlightRepository;
 import org.t13.app.flights.dtos.FlightDto;

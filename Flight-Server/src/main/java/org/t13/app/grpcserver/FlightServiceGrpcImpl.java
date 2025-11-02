@@ -1,6 +1,6 @@
 package org.t13.app.grpcserver;
 
-import org.t13.app.mediator.abstractions.IMediator;
+import org.t13.app.foundation.mediator.abstractions.IMediator;
 import flight.Flight;
 import flight.FlightServiceGrpc;
 import org.t13.app.flights.dtos.FlightDto;

@@ -1,6 +1,6 @@
 package org.t13.app.seats.features.createseat;
 
-import org.t13.app.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.foundation.mediator.abstractions.commands.ICommandHandler;
 import org.t13.app.data.jpa.entities.SeatEntity;
 import org.t13.app.data.jpa.repositories.SeatRepository;
 import org.t13.app.seats.dtos.SeatDto;

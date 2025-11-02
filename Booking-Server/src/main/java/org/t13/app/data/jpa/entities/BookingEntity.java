@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.t13.app.bookings.valueobjects.PassengerInfo;
 import org.t13.app.bookings.valueobjects.Trip;
-import org.t13.app.core.model.BaseEntity;
+import org.t13.app.foundation.core.model.BaseEntity;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

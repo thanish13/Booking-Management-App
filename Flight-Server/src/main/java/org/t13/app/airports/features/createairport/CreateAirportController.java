@@ -1,6 +1,6 @@
 package org.t13.app.airports.features.createairport;
 
-import org.t13.app.mediator.abstractions.IMediator;
+import org.t13.app.foundation.mediator.abstractions.IMediator;
 import org.t13.app.airports.dtos.AirportDto;
 import org.t13.app.airports.features.Mappings;
 import io.swagger.v3.oas.annotations.tags.Tag;

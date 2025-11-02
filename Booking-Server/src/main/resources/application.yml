@@ -19,7 +19,7 @@ spring:
     driver-class-name: org.postgresql.Driver
 
   jpa:
-    entity-packages-to-scan: bookings
+    entity-packages-to-scan: org.t13.app
     hibernate:
       ddl-auto: validate
     properties:

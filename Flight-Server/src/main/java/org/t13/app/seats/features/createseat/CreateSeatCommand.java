@@ -1,7 +1,7 @@
 package org.t13.app.seats.features.createseat;
 
-import org.t13.app.core.event.InternalCommand;
-import org.t13.app.mediator.abstractions.commands.ICommand;
+import org.t13.app.foundation.core.event.InternalCommand;
+import org.t13.app.foundation.mediator.abstractions.commands.ICommand;
 import org.t13.app.seats.dtos.SeatDto;
 import org.t13.app.seats.enums.SeatClass;
 import org.t13.app.seats.enums.SeatType;

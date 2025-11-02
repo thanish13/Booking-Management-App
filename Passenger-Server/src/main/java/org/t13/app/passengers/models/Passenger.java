@@ -1,6 +1,6 @@
 package org.t13.app.passengers.models;
 
-import org.t13.app.core.model.AggregateRoot;
+import org.t13.app.foundation.core.model.AggregateRoot;
 import lombok.*;
 import org.t13.app.passengers.enums.PassengerType;
 import org.t13.app.passengers.features.createpassenger.PassengerCreatedDomainEvent;

@@ -1,6 +1,6 @@
 package org.t13.app.flights.exceptions;
 
-import org.t13.app.core.exception.BadRequestException;
+import org.t13.app.foundation.core.exception.BadRequestException;
 
 public class FlightException extends BadRequestException {
     public FlightException(String message) {

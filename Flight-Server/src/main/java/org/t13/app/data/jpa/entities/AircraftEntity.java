@@ -1,6 +1,6 @@
 package org.t13.app.data.jpa.entities;
 
-import org.t13.app.core.model.BaseEntity;
+import org.t13.app.foundation.core.model.BaseEntity;
 import org.t13.app.aircrafts.valueobjects.ManufacturingYear;
 import org.t13.app.aircrafts.valueobjects.Model;
 import org.t13.app.aircrafts.valueobjects.Name;

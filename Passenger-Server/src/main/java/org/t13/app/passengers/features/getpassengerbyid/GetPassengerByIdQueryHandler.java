@@ -2,7 +2,7 @@ package org.t13.app.passengers.features.getpassengerbyid;
 
 import org.t13.app.data.mongo.documents.PassengerDocument;
 import org.t13.app.data.mongo.repositories.PassengerReadRepository;
-import org.t13.app.mediator.abstractions.queries.IQueryHandler;
+import org.t13.app.foundation.mediator.abstractions.queries.IQueryHandler;
 import org.springframework.stereotype.Service;
 import org.t13.app.passengers.dtos.PassengerDto;
 import org.t13.app.passengers.features.Mappings;

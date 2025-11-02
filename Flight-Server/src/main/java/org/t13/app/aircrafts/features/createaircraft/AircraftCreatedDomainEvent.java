@@ -1,6 +1,6 @@
 package org.t13.app.aircrafts.features.createaircraft;
 
-import org.t13.app.core.event.DomainEvent;
+import org.t13.app.foundation.core.event.DomainEvent;
 
 import java.util.UUID;
 

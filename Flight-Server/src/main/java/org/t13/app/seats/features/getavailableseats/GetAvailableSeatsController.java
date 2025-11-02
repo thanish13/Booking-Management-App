@@ -1,6 +1,6 @@
 package org.t13.app.seats.features.getavailableseats;
 
-import org.t13.app.mediator.abstractions.IMediator;
+import org.t13.app.foundation.mediator.abstractions.IMediator;
 import org.t13.app.seats.dtos.SeatDto;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;

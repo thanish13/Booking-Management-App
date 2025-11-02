@@ -2,7 +2,7 @@ package org.t13.app.passengers.features.createpassenger;
 
 import org.t13.app.data.jpa.entities.PassengerEntity;
 import org.t13.app.data.jpa.repositories.PassengerRepository;
-import org.t13.app.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.foundation.mediator.abstractions.commands.ICommandHandler;
 import org.springframework.stereotype.Service;
 import org.t13.app.passengers.dtos.PassengerDto;
 import org.t13.app.passengers.exceptions.PassengerAlreadyExistException;

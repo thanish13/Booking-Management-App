@@ -1,6 +1,6 @@
 package org.t13.app.airports.features.createairport;
 
-import org.t13.app.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.foundation.mediator.abstractions.commands.ICommandHandler;
 import org.t13.app.airports.dtos.AirportDto;
 import org.t13.app.airports.exceptions.AirportAlreadyExistException;
 import org.t13.app.airports.features.Mappings;

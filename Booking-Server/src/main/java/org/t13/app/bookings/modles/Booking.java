@@ -6,7 +6,7 @@ import org.t13.app.bookings.features.createbooking.BookingCreatedDomainEvent;
 import org.t13.app.bookings.valueobjects.BookingId;
 import org.t13.app.bookings.valueobjects.PassengerInfo;
 import org.t13.app.bookings.valueobjects.Trip;
-import org.t13.app.core.model.AggregateRoot;
+import org.t13.app.foundation.core.model.AggregateRoot;
 
 import java.time.LocalDateTime;
 

@@ -1,6 +1,6 @@
 package org.t13.app.flights.features;
 
-import org.t13.app.utils.protobuf.ProtobufUtils;
+import org.t13.app.foundation.utils.protobuf.ProtobufUtils;
 import com.github.f4b6a3.uuid.UuidCreator;
 import org.t13.app.aircrafts.valueobjects.AircraftId;
 import org.t13.app.airports.valueobjects.AirportId;

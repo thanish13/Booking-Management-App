@@ -1,6 +1,6 @@
 package org.t13.app.passengers.features.createpassenger;
 
-import org.t13.app.core.event.DomainEvent;
+import org.t13.app.foundation.core.event.DomainEvent;
 import org.t13.app.passengers.enums.PassengerType;
 
 import java.util.UUID;

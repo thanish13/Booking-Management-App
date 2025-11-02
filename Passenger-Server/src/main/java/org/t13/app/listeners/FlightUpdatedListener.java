@@ -1,8 +1,8 @@
 package org.t13.app.listeners;
 
-import org.t13.app.contracts.flight.FlightUpdated;
-import org.t13.app.rabbitmq.MessageHandler;
-import org.t13.app.utils.jsonconverter.JsonConverterUtils;
+import org.t13.app.foundation.contracts.flight.FlightUpdated;
+import org.t13.app.foundation.rabbitmq.MessageHandler;
+import org.t13.app.foundation.utils.jsonconverter.JsonConverterUtils;
 import org.slf4j.Logger;
 import org.slf4j.event.KeyValuePair;
 import org.springframework.stereotype.Component;

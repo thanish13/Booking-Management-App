@@ -1,6 +1,6 @@
 package org.t13.app.passengers.features.createpassenger;
 
-import org.t13.app.mediator.abstractions.IMediator;
+import org.t13.app.foundation.mediator.abstractions.IMediator;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

@@ -1,6 +1,6 @@
 package org.t13.app.seats.features.createseat;
 
-import org.t13.app.mediator.abstractions.IMediator;
+import org.t13.app.foundation.mediator.abstractions.IMediator;
 import org.t13.app.seats.dtos.SeatDto;
 import org.t13.app.seats.features.Mappings;
 import io.swagger.v3.oas.annotations.tags.Tag;

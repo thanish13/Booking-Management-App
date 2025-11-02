@@ -2,8 +2,8 @@ package org.t13.app.passengers.features.createpassenger;
 
 import org.t13.app.data.mongo.documents.PassengerDocument;
 import org.t13.app.data.mongo.repositories.PassengerReadRepository;
-import org.t13.app.mediator.abstractions.commands.ICommandHandler;
-import org.t13.app.mediator.abstractions.requests.Unit;
+import org.t13.app.foundation.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.foundation.mediator.abstractions.requests.Unit;
 import org.springframework.stereotype.Service;
 import org.t13.app.passengers.exceptions.PassengerAlreadyExistException;
 import org.t13.app.passengers.features.Mappings;

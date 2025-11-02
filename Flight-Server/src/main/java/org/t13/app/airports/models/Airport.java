@@ -1,6 +1,6 @@
 package org.t13.app.airports.models;
 
-import org.t13.app.core.model.AggregateRoot;
+import org.t13.app.foundation.core.model.AggregateRoot;
 import org.t13.app.airports.features.createairport.AirportCreatedDomainEvent;
 import org.t13.app.airports.valueobjects.Address;
 import org.t13.app.airports.valueobjects.AirportId;

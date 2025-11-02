@@ -1,7 +1,7 @@
 package org.t13.app.flights.features.createflight;
 
-import org.t13.app.core.event.InternalCommand;
-import org.t13.app.mediator.abstractions.commands.ICommand;
+import org.t13.app.foundation.core.event.InternalCommand;
+import org.t13.app.foundation.mediator.abstractions.commands.ICommand;
 import org.t13.app.flights.dtos.FlightDto;
 import org.t13.app.flights.enums.FlightStatus;
 import java.math.BigDecimal;

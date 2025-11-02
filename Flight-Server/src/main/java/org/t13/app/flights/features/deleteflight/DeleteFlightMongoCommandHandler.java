@@ -1,7 +1,7 @@
 package org.t13.app.flights.features.deleteflight;
 
-import org.t13.app.mediator.abstractions.commands.ICommandHandler;
-import org.t13.app.mediator.abstractions.requests.Unit;
+import org.t13.app.foundation.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.foundation.mediator.abstractions.requests.Unit;
 import org.t13.app.data.mongo.documents.FlightDocument;
 import org.t13.app.data.mongo.repositories.FlightReadRepository;
 import org.t13.app.flights.exceptions.FlightNotFoundException;

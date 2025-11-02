@@ -1,6 +1,6 @@
 package org.t13.app.seats.models;
 
-import org.t13.app.core.model.AggregateRoot;
+import org.t13.app.foundation.core.model.AggregateRoot;
 import org.t13.app.seats.enums.SeatClass;
 import org.t13.app.seats.enums.SeatType;
 import org.t13.app.seats.features.createseat.SeatCreatedDomainEvent;

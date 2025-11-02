@@ -1,9 +1,8 @@
 package org.t13.app.grpcserver;
 
-import org.t13.app.mediator.abstractions.IMediator;
+import org.t13.app.foundation.mediator.abstractions.IMediator;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
-import org.springframework.stereotype.Service;
 import org.t13.app.passengers.dtos.PassengerDto;
 import org.t13.app.passengers.features.getpassengerbyid.GetPassengerByIdQuery;
 import passenger.Passenger;

@@ -1,6 +1,6 @@
 package org.t13.app.flights.features.getavailableflights;
 
-import org.t13.app.mediator.abstractions.queries.IQueryHandler;
+import org.t13.app.foundation.mediator.abstractions.queries.IQueryHandler;
 import org.t13.app.data.mongo.documents.FlightDocument;
 import org.t13.app.data.mongo.repositories.FlightReadRepository;
 import org.t13.app.flights.dtos.FlightDto;

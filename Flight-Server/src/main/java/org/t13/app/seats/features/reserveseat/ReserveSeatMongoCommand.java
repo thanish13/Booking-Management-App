@@ -1,8 +1,8 @@
 package org.t13.app.seats.features.reserveseat;
 
-import org.t13.app.core.event.InternalCommand;
-import org.t13.app.mediator.abstractions.commands.ICommand;
-import org.t13.app.mediator.abstractions.requests.Unit;
+import org.t13.app.foundation.core.event.InternalCommand;
+import org.t13.app.foundation.mediator.abstractions.commands.ICommand;
+import org.t13.app.foundation.mediator.abstractions.requests.Unit;
 import org.t13.app.seats.enums.SeatClass;
 import org.t13.app.seats.enums.SeatType;
 import java.util.UUID;

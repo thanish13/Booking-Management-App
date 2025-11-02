@@ -1,10 +1,10 @@
 package org.t13.app;
 
-import org.t13.app.contracts.passenger.PassengerCreated;
-import org.t13.app.core.event.DomainEvent;
-import org.t13.app.core.event.EventMapper;
-import org.t13.app.core.event.IntegrationEvent;
-import org.t13.app.core.event.InternalCommand;
+import org.t13.app.foundation.contracts.passenger.PassengerCreated;
+import org.t13.app.foundation.core.event.DomainEvent;
+import org.t13.app.foundation.core.event.EventMapper;
+import org.t13.app.foundation.core.event.IntegrationEvent;
+import org.t13.app.foundation.core.event.InternalCommand;
 import org.springframework.stereotype.Component;
 import org.t13.app.passengers.features.createpassenger.CreatePassengerMongoCommand;
 import org.t13.app.passengers.features.createpassenger.PassengerCreatedDomainEvent;

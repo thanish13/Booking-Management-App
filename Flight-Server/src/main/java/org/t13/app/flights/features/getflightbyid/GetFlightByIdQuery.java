@@ -1,6 +1,6 @@
 package org.t13.app.flights.features.getflightbyid;
 
-import org.t13.app.mediator.abstractions.queries.IQuery;
+import org.t13.app.foundation.mediator.abstractions.queries.IQuery;
 import org.t13.app.flights.dtos.FlightDto;
 import java.util.UUID;
 

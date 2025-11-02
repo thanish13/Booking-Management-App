@@ -16,8 +16,8 @@ import org.t13.app.bookings.valueobjects.PassengerInfo;
 import org.t13.app.bookings.valueobjects.Trip;
 import org.t13.app.data.jpa.entities.BookingEntity;
 import org.t13.app.data.jpa.repositories.BookingRepository;
-import org.t13.app.mediator.abstractions.commands.ICommandHandler;
-import org.t13.app.utils.protobuf.ProtobufUtils;
+import org.t13.app.foundation.mediator.abstractions.commands.ICommandHandler;
+import org.t13.app.foundation.utils.protobuf.ProtobufUtils;
 import passenger.Passenger;
 import passenger.PassengerServiceGrpc;
 
