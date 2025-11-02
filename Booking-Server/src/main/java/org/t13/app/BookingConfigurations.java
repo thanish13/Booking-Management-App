@@ -1,11 +1,9 @@
 package org.t13.app;
 
-import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.t13.app.foundation.collector.OtelCollectorConfiguration;
 import org.t13.app.foundation.core.event.EventDispatcherConfiguration;
-import org.t13.app.foundation.flyway.FlywayConfiguration;
 import org.t13.app.foundation.jpa.JpaConfiguration;
 import org.t13.app.foundation.keycloak.KeycloakConfiguration;
 import org.t13.app.foundation.logger.LoggerConfiguration;
@@ -24,7 +22,6 @@ import org.t13.app.foundation.web.WebClientConfiguration;
         JpaConfiguration.class,
         MongoConfiguration.class,
         LoggerConfiguration.class,
-        FlywayAutoConfiguration.FlywayConfiguration.class,
         RabbitmqConfiguration.class,
         OtelCollectorConfiguration.class,
         SwaggerConfiguration.class,

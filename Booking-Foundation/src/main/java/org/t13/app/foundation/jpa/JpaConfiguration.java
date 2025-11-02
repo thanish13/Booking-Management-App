@@ -29,16 +29,17 @@ public class JpaConfiguration {
     @Value("${spring.jpa.entity-packages-to-scan}")
     private String entityPackagesToScan;
 
-    @Bean("dataSource")
-    @ConfigurationProperties("${spring.datasource}")
+    @Bean("dataSourceProps")
+    @ConfigurationProperties(prefix = "spring.datasource")
     public DataSourceProperties dataSourceProperties(){
-        return this.dataSourceProperties();
+        return new DataSourceProperties();
     };
 
-    @Bean
+    @Bean("dataSource")
     @Profile("!test")
-    public DataSource dataSource(@Qualifier("dataSource") DataSourceProperties dataSourceProperties) {
+    public DataSource dataSource(@Qualifier("dataSourceProps") DataSourceProperties dataSourceProperties) {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        System.out.println("Password" + dataSourceProperties.getPassword());
         dataSource.setDriverClassName(dataSourceProperties.getDriverClassName());
         dataSource.setUrl(dataSourceProperties.getUrl());
         dataSource.setUsername(dataSourceProperties.getUsername());
@@ -46,10 +47,10 @@ public class JpaConfiguration {
         return dataSource;
     }
 
-    @Bean
+    @Bean("entityManagerFactory")
     @Profile("!test")
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(
-            DataSource dataSource,
+            @Qualifier("dataSource") DataSource dataSource,
             JpaProperties jpaProperties,
             HibernateProperties hibernateProperties) {
 
@@ -77,7 +78,7 @@ public class JpaConfiguration {
 
     @Bean
     @Profile("!test")
-    public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
+    public JpaTransactionManager transactionManager(@Qualifier("entityManagerFactory") EntityManagerFactory entityManagerFactory) {
         return new JpaTransactionManager(entityManagerFactory);
     }
 
