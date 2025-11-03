@@ -33,4 +33,5 @@ import org.t13.app.foundation.web.WebClientConfiguration;
         MediatorConfiguration.class
 })
 public class BookingConfigurations {
+
 }
