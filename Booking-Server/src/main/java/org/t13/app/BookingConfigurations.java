@@ -1,5 +1,6 @@
 package org.t13.app;
 
+import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.t13.app.foundation.collector.OtelCollectorConfiguration;
@@ -20,6 +21,7 @@ import org.t13.app.foundation.web.WebClientConfiguration;
 @Import({
         CustomProblemDetailsHandler.class,
         JpaConfiguration.class,
+        FlywayAutoConfiguration.FlywayConfiguration.class,
         MongoConfiguration.class,
         LoggerConfiguration.class,
         RabbitmqConfiguration.class,
