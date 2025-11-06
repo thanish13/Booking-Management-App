@@ -10,7 +10,10 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @SpringBootApplication
 @EnableAsync
 @EnableJpaRepositories
-@EnableAutoConfiguration(exclude = {org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration.class, DataSourceAutoConfiguration.class})
+@EnableAutoConfiguration(exclude = {
+		org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration.class,
+		DataSourceAutoConfiguration.class,
+		org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration.class})
 public class BookingApplication {
 
 	public static void main(String[] args) {

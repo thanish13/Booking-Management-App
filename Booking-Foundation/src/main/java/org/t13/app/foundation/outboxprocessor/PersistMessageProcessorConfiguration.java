@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClas
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.Primary;
 import org.springframework.scheduling.TaskScheduler;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.t13.app.foundation.mediator.MediatorConfiguration;
@@ -19,6 +20,7 @@ import org.t13.app.foundation.mediator.abstractions.IMediator;
 public class PersistMessageProcessorConfiguration {
 
     @Bean
+    @Primary
     @ConditionalOnMissingClass
     public PersistMessageProcessor persistMessageProcessor(
             EntityManager entityManager,
@@ -38,5 +40,6 @@ public class PersistMessageProcessorConfiguration {
             PlatformTransactionManager transactionManager) {
         return new PersistMessageBackgroundJob(taskScheduler, persistMessageProcessor, logger, transactionManager);
     }
+
 }
 
