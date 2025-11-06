@@ -18,6 +18,14 @@ spring:
     password: postgres
     driver-class-name: org.postgresql.Driver
 
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    baseline-version: 0
+    validate-on-migrate: true
+    clean-disabled: false
+
   jpa:
     entity-packages-to-scan: org.t13.app
     hibernate:

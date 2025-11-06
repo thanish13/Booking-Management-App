@@ -11,7 +11,6 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.boot.autoconfigure.amqp.RabbitProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.t13.app.outboxprocessor.QPersistMessageEntity;
 import org.t13.app.foundation.core.event.IntegrationEvent;
 import org.t13.app.foundation.core.event.InternalCommand;
 import org.t13.app.foundation.jpa.JpaConfiguration;
@@ -36,7 +35,7 @@ public class PersistMessageProcessorImpl implements PersistMessageProcessor {
   private final IMediator mediator;
 
   // Generated Q class from QueryDSL
-  private final QPersistMessageEntity qPersistMessageEntity = QPersistMessageEntity.persistMessageEntity;
+  private final org.t13.app.foundation.outboxprocessor.QPersistMessageEntity qPersistMessageEntity = org.t13.app.foundation.outboxprocessor.QPersistMessageEntity.persistMessageEntity;
 
   public PersistMessageProcessorImpl(
     EntityManager entityManager,

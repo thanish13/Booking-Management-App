@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Import;
 import org.t13.app.foundation.collector.OtelCollectorConfiguration;
 import org.t13.app.foundation.core.event.EventDispatcherConfiguration;
 import org.t13.app.foundation.jpa.JpaConfiguration;
+import org.t13.app.foundation.flyway.FlywayConfiguration;
 import org.t13.app.foundation.keycloak.KeycloakConfiguration;
 import org.t13.app.foundation.logger.LoggerConfiguration;
 import org.t13.app.foundation.mediator.MediatorConfiguration;
@@ -21,6 +22,7 @@ import org.t13.app.foundation.web.WebClientConfiguration;
 @Import({
         CustomProblemDetailsHandler.class,
         JpaConfiguration.class,
+        //FlywayConfiguration.class,
         FlywayAutoConfiguration.FlywayConfiguration.class,
         MongoConfiguration.class,
         LoggerConfiguration.class,
