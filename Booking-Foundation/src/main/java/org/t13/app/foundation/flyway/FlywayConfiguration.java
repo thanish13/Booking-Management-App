@@ -37,7 +37,7 @@ public class FlywayConfiguration {
     }
 
 
-    @Bean
+    @Bean("flywayBean")
     public Flyway flyway(@Qualifier("dataSource") DataSource dataSource, @Qualifier("flywayProps") FlywayProperties flywayProperties) {
         return Flyway.configure()
                 .dataSource(dataSource)

@@ -12,12 +12,12 @@ spring:
       enabled: true
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/passenger_write
+    url: jdbc:postgresql://localhost:5433/passenger_write
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
   jpa:
-    entity-packages-to-scan: io.bookingmicroservices.passenger
+    entity-packages-to-scan: org.t13.app
     hibernate:
       ddl-auto: validate
     properties:
