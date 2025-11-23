@@ -27,7 +27,7 @@ import org.springframework.context.annotation.Import;
         RabbitmqConfiguration.class,
         OtelCollectorConfiguration.class,
         SwaggerConfiguration.class,
-        KeycloakConfiguration.class,
+//      KeycloakConfiguration.class,
         WebClientConfiguration.class,
         ThreadPoolConfiguration.class,
         PersistMessageProcessorConfiguration.class,
