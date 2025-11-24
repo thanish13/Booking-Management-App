@@ -373,8 +373,8 @@ networks:
   infrastructure:
     name: infrastructure
     driver: bridge
-  keycloak-net:
-    driver: bridge
+#  keycloak-net:
+#    driver: bridge
     
 volumes:
   elastic-data:
