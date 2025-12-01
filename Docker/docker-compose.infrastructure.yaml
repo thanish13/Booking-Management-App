@@ -376,8 +376,6 @@ networks:
 #  keycloak-net:
 #    driver: bridge
 
-
-    
 volumes:
   elastic-data:
   postgres-data:
