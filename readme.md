@@ -1,3 +1,3 @@
 Booking Management App
 
-A spring boot application.
+A spring boot application that handles all the booking.
