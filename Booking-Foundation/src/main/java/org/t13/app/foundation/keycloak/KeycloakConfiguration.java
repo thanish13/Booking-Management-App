@@ -20,8 +20,8 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Objects;
 
-//@Configuration
-//@EnableMethodSecurity
+@Configuration
+@EnableMethodSecurity
 public class KeycloakConfiguration {
 
     @Value("${spring.security.oauth2.resourceserver.jwt.jwk-set-uri}")

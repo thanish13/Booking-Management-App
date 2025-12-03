@@ -27,7 +27,7 @@ import org.t13.app.foundation.web.WebClientConfiguration;
         RabbitmqConfiguration.class,
         OtelCollectorConfiguration.class,
         SwaggerConfiguration.class,
-//      KeycloakConfiguration.class,
+        KeycloakConfiguration.class,
         WebClientConfiguration.class,
         ThreadPoolConfiguration.class,
         PersistMessageProcessorConfiguration.class,

@@ -352,29 +352,29 @@ services:
     networks:
       - infrastructure
 
-#  #######################################################
-#  # keycloak
-#  #######################################################
-#  keycloak:
-#    image: quay.io/keycloak/keycloak:latest
-#    environment:
-#      KEYCLOAK_ADMIN: admin
-#      KEYCLOAK_ADMIN_PASSWORD: admin
-#      KC_HOSTNAME: localhost
-#      KC_HTTP_ENABLED: true # For development, use HTTPS in production
-#    ports:
-#      - "8090:8090"
-#    networks:
-#      - keycloak-net
-#    command: start-dev --http-port=8180 # For development, use `start` with proper configuration in production
-#
+  #######################################################
+  # keycloak
+  #######################################################
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_HOSTNAME: localhost
+      KC_HTTP_ENABLED: true # For development, use HTTPS in production
+    ports:
+      - "8090:8090"
+    networks:
+      - keycloak-net
+    command: start-dev --http-port=8090 # For development, use `start` with proper configuration in production
+
 
 networks:
   infrastructure:
     name: infrastructure
     driver: bridge
-#  keycloak-net:
-#    driver: bridge
+  keycloak-net:
+    driver: bridge
 
 volumes:
   elastic-data:
