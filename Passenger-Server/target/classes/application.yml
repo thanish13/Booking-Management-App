@@ -16,6 +16,7 @@ spring:
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
+
   jpa:
     entity-packages-to-scan: org.t13.app
     hibernate:
@@ -47,8 +48,8 @@ spring:
       service-version: 1.0.0
       endpoint: http://localhost:4317
 
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: http://localhost:8080/realms/keycloak-realm/protocol/openid-connect/certs
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          jwk-set-uri: http://localhost:8080/realms/keycloak-realm/protocol/openid-connect/certs

@@ -6,7 +6,6 @@ spring:
 
   main:
     allow-circular-references: true
-    allow-bean-definition-overriding: true
 
   mvc:
     problemdetails:
@@ -17,14 +16,6 @@ spring:
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
-
-  flyway:
-    enabled: true
-    locations: classpath:migration
-    baseline-on-migrate: true
-    baseline-version: 0
-    validate-on-migrate: true
-    clean-disabled: false
 
   jpa:
     entity-packages-to-scan: org.t13.app
@@ -57,8 +48,8 @@ spring:
       service-version: 1.0.0
       endpoint: http://localhost:4317
 
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: http://localhost:8080/realms/keycloak-realm/protocol/openid-connect/certs
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          jwk-set-uri: http://localhost:8080/realms/keycloak-realm/protocol/openid-connect/certs
