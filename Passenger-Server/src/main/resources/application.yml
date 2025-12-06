@@ -33,6 +33,7 @@ spring:
       uri: mongodb://localhost:27017/passenger_read
       database: passenger_read
 
+
   rabbitmq:
     host: localhost
     port: 5672
