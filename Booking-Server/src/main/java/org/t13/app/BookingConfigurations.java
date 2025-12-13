@@ -12,6 +12,7 @@ import org.t13.app.foundation.mediator.MediatorConfiguration;
 import org.t13.app.foundation.mongo.MongoConfiguration;
 import org.t13.app.foundation.outboxprocessor.PersistMessageProcessorConfiguration;
 import org.t13.app.foundation.problemdetails.CustomProblemDetailsHandler;
+import org.t13.app.foundation.r2dbc.R2dbcConfiguration;
 import org.t13.app.foundation.rabbitmq.RabbitmqConfiguration;
 import org.t13.app.foundation.swagger.SwaggerConfiguration;
 import org.t13.app.foundation.threadpool.ThreadPoolConfiguration;
@@ -21,6 +22,7 @@ import org.t13.app.foundation.web.WebClientConfiguration;
 @Import({
         CustomProblemDetailsHandler.class,
         JpaConfiguration.class,
+        //R2dbcConfiguration.class,
         FlywayAutoConfiguration.FlywayConfiguration.class,
         MongoConfiguration.class,
         LoggerConfiguration.class,

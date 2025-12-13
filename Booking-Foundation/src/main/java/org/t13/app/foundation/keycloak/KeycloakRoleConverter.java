@@ -1,5 +1,6 @@
 package org.t13.app.foundation.keycloak;
 
+import org.jetbrains.annotations.NotNull;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -12,7 +13,7 @@ import java.util.Set;
 
 public class KeycloakRoleConverter implements Converter<Jwt, Collection<GrantedAuthority>> {
     @Override
-    public Collection<GrantedAuthority> convert(Jwt jwt) {
+    public Collection<GrantedAuthority> convert(@NotNull Jwt jwt) {
         Set<GrantedAuthority> authorities = new HashSet<>();
 
         // 1. Resource Roles (from resource_access)
