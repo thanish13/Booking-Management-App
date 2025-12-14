@@ -81,4 +81,5 @@ public class OtelCollectorConfiguration {
                 .setPropagators(ContextPropagators.create(W3CTraceContextPropagator.getInstance()))
                 .buildAndRegisterGlobal();
     }
+
 }
