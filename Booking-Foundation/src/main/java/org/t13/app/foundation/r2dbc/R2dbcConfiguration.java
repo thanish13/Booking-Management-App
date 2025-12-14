@@ -32,7 +32,6 @@ public class R2dbcConfiguration {
     }
 
     @Bean
-
     public ConnectionFactory r2dbcConnectionFactory() throws URISyntaxException {
         URI uri = new URI(r2dbcProperties.getUrl());
 
