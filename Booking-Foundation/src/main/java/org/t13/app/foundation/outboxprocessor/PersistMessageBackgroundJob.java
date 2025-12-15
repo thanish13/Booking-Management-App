@@ -5,6 +5,7 @@ import jakarta.annotation.PreDestroy;
 import org.slf4j.Logger;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.scheduling.TaskScheduler;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
@@ -25,7 +26,7 @@ public class PersistMessageBackgroundJob {
             TaskScheduler taskScheduler,
             PersistMessageProcessor persistMessageProcessor,
             Logger logger,
-            PlatformTransactionManager transactionManager) {
+            JpaTransactionManager transactionManager) {
         this.taskScheduler = taskScheduler;
         this.persistMessageProcessor = persistMessageProcessor;
         this.logger = logger;

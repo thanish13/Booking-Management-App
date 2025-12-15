@@ -3,12 +3,14 @@ package org.t13.app.foundation.outboxprocessor;
 import jakarta.persistence.EntityManager;
 import org.slf4j.Logger;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.amqp.RabbitProperties;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Primary;
+import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.scheduling.TaskScheduler;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.t13.app.foundation.mediator.MediatorConfiguration;
@@ -23,7 +25,7 @@ public class PersistMessageProcessorConfiguration {
     @Primary
     @ConditionalOnMissingClass
     public PersistMessageProcessor persistMessageProcessor(
-            EntityManager entityManager,
+            @Qualifier("entityManager") EntityManager entityManager,
             RabbitTemplate rabbitTemplate,
             RabbitProperties rabbitProperties,
             Logger logger,
@@ -37,7 +39,7 @@ public class PersistMessageProcessorConfiguration {
             TaskScheduler taskScheduler,
             PersistMessageProcessor persistMessageProcessor,
             Logger logger,
-            PlatformTransactionManager transactionManager) {
+            @Qualifier("transactionManager") JpaTransactionManager transactionManager) {
         return new PersistMessageBackgroundJob(taskScheduler, persistMessageProcessor, logger, transactionManager);
     }
 
