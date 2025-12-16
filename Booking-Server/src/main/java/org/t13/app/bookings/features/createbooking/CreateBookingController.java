@@ -24,6 +24,7 @@ public class CreateBookingController {
     }
 
     @PostMapping()
+
     //@PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<BookingDto> createBooking(@RequestBody CreateBookingRequestDto createAirportRequestDto) {
         CreateBookingCommand command = Mappings.toCreateBookingCommand(createAirportRequestDto);
