@@ -78,6 +78,7 @@ public class JpaConfiguration {
         return factoryBean;
     }
 
+    @Primary
     @Bean("transactionManager")
     @Profile("!test")
     public JpaTransactionManager transactionManager(@Qualifier("entityManagerFactory") EntityManagerFactory entityManagerFactory) {

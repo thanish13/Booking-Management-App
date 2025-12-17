@@ -1,6 +1,7 @@
 package org.t13.app.foundation.mediator;
 
 import org.slf4j.Logger;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -10,6 +11,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
+import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.validation.Validator;
 import org.t13.app.foundation.core.event.EventDispatcher;
@@ -56,7 +58,7 @@ public class MediatorConfiguration {
     @Bean
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     public <TRequest extends IRequest<TResponse>, TResponse> TransactionPipelineBehavior<TRequest, TResponse> transactionPipelineBehavior(
-            PlatformTransactionManager transactionManager,
+            @Qualifier("transactionManager") JpaTransactionManager transactionManager,
             Logger logger,
             EventDispatcher eventDispatcher) {
         return new TransactionPipelineBehavior<>(transactionManager, logger, eventDispatcher);

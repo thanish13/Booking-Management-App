@@ -2,6 +2,7 @@ package org.t13.app.foundation.mediator.behaviors;
 
 
 import org.slf4j.Logger;
+import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 import org.t13.app.foundation.core.event.DomainEvent;
@@ -19,10 +20,10 @@ public class TransactionPipelineBehavior<TRequest extends IRequest<TResponse>, T
     private final EventDispatcher eventDispatcher;
 
     public TransactionPipelineBehavior(
-            PlatformTransactionManager platformTransactionManager,
+            JpaTransactionManager transactionManager,
             Logger logger,
             EventDispatcher eventDispatcher) {
-        this.transactionTemplate = new TransactionTemplate(platformTransactionManager);
+        this.transactionTemplate = new TransactionTemplate(transactionManager);
         this.logger = logger;
         this.eventDispatcher = eventDispatcher;
     }
