@@ -119,6 +119,7 @@ class Mediator implements IMediator {
         return handlerChain.handle();
     }
 
+    @SuppressWarnings("unchecked")
     private <TRequest extends IRequest<TResponse>, TResponse>
             IRequestHandler<TRequest, TResponse> resolveRequestHandler(
                     TRequest request, ApplicationContext applicationContext) {
@@ -160,6 +161,7 @@ class Mediator implements IMediator {
                 });
     }
 
+    @SuppressWarnings("unchecked")
     private <TCommand extends ICommand<TResponse>, TResponse>
             ICommandHandler<TCommand, TResponse> resolveCommandHandler(
                     TCommand command, ApplicationContext applicationContext) {
@@ -200,6 +202,7 @@ class Mediator implements IMediator {
                 });
     }
 
+    @SuppressWarnings("unchecked")
     private <TQuery extends IQuery<TResponse>, TResponse> IQueryHandler<TQuery, TResponse> resolveQueryHandler(
             TQuery query, ApplicationContext applicationContext) {
         return (IQueryHandler<TQuery, TResponse>) queryHandlerCache.computeIfAbsent(
@@ -239,6 +242,7 @@ class Mediator implements IMediator {
                 });
     }
 
+    @SuppressWarnings("unchecked")
     private <TRequest extends IRequest<TResponse>, TResponse>
             List<IPipelineBehavior<TRequest, TResponse>> resolveRequestPipelineBehaviors(
                     TRequest request, ApplicationContext applicationContext) {
@@ -276,6 +280,7 @@ class Mediator implements IMediator {
                 });
     }
 
+    @SuppressWarnings("unchecked")
     private <TNotification extends INotification>
             List<INotificationPipelineBehavior<TNotification>> resolveNotificationPipelineBehaviors(
                     TNotification notification, ApplicationContext applicationContext) {
@@ -306,6 +311,7 @@ class Mediator implements IMediator {
                 });
     }
 
+    @SuppressWarnings("unchecked")
     private <TNotification extends INotification> @Nullable
             INotificationHandler<TNotification> resolveNotificationHandler(
                     TNotification notification, ApplicationContext applicationContext) {
