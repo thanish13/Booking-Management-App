@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.jpa.EntityManagerHolder;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -79,17 +80,24 @@ public class JpaConfiguration {
     }
 
     @Primary
-    @Bean("transactionManager")
-    @Profile("!test")
-    public JpaTransactionManager transactionManager(@Qualifier("entityManagerFactory") EntityManagerFactory entityManagerFactory) {
-        return new JpaTransactionManager(entityManagerFactory);
-    }
-
-    @Primary
     @Bean("entityManager")
     @Profile("!test")
     public EntityManager entityManager(@Qualifier("entityManagerFactory") EntityManagerFactory entityManagerFactory){
         return entityManagerFactory.createEntityManager();
+    }
+
+    @Primary
+    @Bean("entityManagerHolder")
+    @Profile("!test")
+    public EntityManagerHolder entityManagerHolder(@Qualifier("entityManager") EntityManager entityManager){
+        return new EntityManagerHolder(entityManager);
+    }
+
+    @Primary
+    @Bean("transactionManager")
+    @Profile("!test")
+    public JpaTransactionManager transactionManager(@Qualifier("entityManagerHolder") EntityManagerHolder entityManagerHolder) {
+        return new JpaTransactionManager(entityManagerHolder.getEntityManager().getEntityManagerFactory());
     }
 
     @Bean
