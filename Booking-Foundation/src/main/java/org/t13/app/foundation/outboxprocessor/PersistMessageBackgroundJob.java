@@ -3,6 +3,7 @@ package org.t13.app.foundation.outboxprocessor;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.slf4j.Logger;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -26,7 +27,7 @@ public class PersistMessageBackgroundJob {
             TaskScheduler taskScheduler,
             PersistMessageProcessor persistMessageProcessor,
             Logger logger,
-            JpaTransactionManager transactionManager) {
+            @Qualifier("transactionManager") JpaTransactionManager transactionManager) {
         this.taskScheduler = taskScheduler;
         this.persistMessageProcessor = persistMessageProcessor;
         this.logger = logger;
