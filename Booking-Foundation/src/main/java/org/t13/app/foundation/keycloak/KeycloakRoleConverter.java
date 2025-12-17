@@ -10,6 +10,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class KeycloakRoleConverter implements Converter<Jwt, Collection<GrantedAuthority>> {
     @Override
@@ -25,6 +26,7 @@ public class KeycloakRoleConverter implements Converter<Jwt, Collection<GrantedA
         // 3. Groups (from groups claim if present)
         extractGroups(jwt, authorities);
 
+        System.out.println(authorities.stream().map(x -> x.getAuthority()).collect(Collectors.joining()));
         return authorities;
     }
 

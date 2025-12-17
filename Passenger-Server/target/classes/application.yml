@@ -33,6 +33,7 @@ spring:
       uri: mongodb://localhost:27017/passenger_read
       database: passenger_read
 
+
   rabbitmq:
     host: localhost
     port: 5672
@@ -52,4 +53,17 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8090/realms/keycloak-realm/protocol/openid-connect/certs
+          jwk-set-uri: http://localhost:8090/realms/master/protocol/openid-connect/certs
+
+logging:
+  name: passenger-logger
+  level:
+    root: INFO
+
+server:
+  port: 8083
+
+grpc:
+  server:
+    port: 9093
+
