@@ -50,6 +50,7 @@ public class JpaConfiguration {
         return dataSource;
     }
 
+    @Primary
     @Bean("entityManagerFactory")
     @Profile("!test")
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(
