@@ -2,6 +2,7 @@ package org.t13.app.foundation.keycloak;
 
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.convert.converter.Converter;
@@ -22,6 +23,9 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Objects;
 
+@ConditionalOnProperty(prefix = "security",
+        name = "enabled",
+        havingValue = "true")
 @Configuration
 @EnableMethodSecurity
 public class KeycloakConfiguration {
