@@ -45,6 +45,7 @@ public class KeycloakConfiguration {
                             AbstractRequestMatcherRegistry::anyRequest)
                     .build();
         }
+
         return httpSecurity
                 .exceptionHandling(exception -> {
                     exception.authenticationEntryPoint(new CustomAuthenticationEntryPoint(logger));
