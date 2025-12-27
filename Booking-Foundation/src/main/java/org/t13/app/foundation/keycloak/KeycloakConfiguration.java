@@ -22,6 +22,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Objects;
+import java.util.TreeMap;
 
 @ConditionalOnProperty(prefix = "security",
         name = "enabled",
@@ -38,6 +39,7 @@ public class KeycloakConfiguration {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity, Logger logger) throws Exception {
+
         if (!securityEnabled) {
             httpSecurity
                     .csrf(AbstractHttpConfigurer::disable)
@@ -45,7 +47,7 @@ public class KeycloakConfiguration {
                             AbstractRequestMatcherRegistry::anyRequest)
                     .build();
         }
-
+        
         return httpSecurity
                 .exceptionHandling(exception -> {
                     exception.authenticationEntryPoint(new CustomAuthenticationEntryPoint(logger));
