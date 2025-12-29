@@ -1,3 +1,3 @@
 Flight Management App
 
-A spring boot application that handles all the booking.
+A spring boot application that handles all the booking of flight tickets.
