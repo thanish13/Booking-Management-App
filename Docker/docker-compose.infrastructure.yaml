@@ -79,7 +79,7 @@ services:
     #   - MONGO_INITDB_ROOT_USERNAME=root
     #   - MONGO_INITDB_ROOT_PASSWORD=secret
     ports:
-      - 27017:27017
+      - "27017:27017"
     networks:
       - infrastructure
 
@@ -92,7 +92,7 @@ services:
     container_name: redis
     restart: unless-stopped
     ports:
-      - 6379:6379    
+      - "6379:6379"
     networks:
       - infrastructure      
 
@@ -171,7 +171,7 @@ services:
       - "9090:9090"
     volumes:
       - ./../configs/prometheus.yaml:/etc/prometheus/prometheus.yml
-    # to passe one flag, such as "--log.level=debug" or "--web.enable-remote-write-receiver", we need to override the whole command, as we can't just pass one extra argument
+    # to passes one flag, such as "--log.level=debug" or "--web.enable-remote-write-receiver", we need to override the whole command, as we can't just pass one extra argument
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
       - "--storage.tsdb.path=/prometheus"
@@ -309,7 +309,7 @@ services:
        - elastic-data:/usr/share/elasticsearch/data
      ports:
        - ${ELASTIC_HOST_PORT:-9200}:${ELASTIC_PORT:-9200}
-       - 9300:9300
+       - "9300:9300"
      networks:
        - infrastructure
 

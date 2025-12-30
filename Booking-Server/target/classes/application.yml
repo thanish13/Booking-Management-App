@@ -60,6 +60,8 @@ spring:
         jwt:
           jwk-set-uri: http://localhost:8090/realms/master/protocol/openid-connect/certs
 
+security:
+  enabled: false
 
 logging:
   name: booking-logger
