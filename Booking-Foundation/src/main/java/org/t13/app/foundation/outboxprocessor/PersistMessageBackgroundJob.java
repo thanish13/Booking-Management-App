@@ -45,7 +45,7 @@ public class PersistMessageBackgroundJob {
             } catch (Exception ex) {
                 logger.error("Error in persistent message processing", ex);
             }
-        }, 1000);
+        }, 60000);
     }
 
     @PreDestroy

@@ -8,6 +8,7 @@ import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageDeliveryMode;
 import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.amqp.RabbitProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -38,7 +39,8 @@ public class PersistMessageProcessorImpl implements PersistMessageProcessor {
   private final org.t13.app.foundation.outboxprocessor.QPersistMessageEntity qPersistMessageEntity = org.t13.app.foundation.outboxprocessor.QPersistMessageEntity.persistMessageEntity;
 
   public PersistMessageProcessorImpl(
-    EntityManager entityManager,
+
+    @Qualifier("entityManager") EntityManager entityManager,
     RabbitTemplate rabbitmqTemplate,
     RabbitProperties rabbitProperties,
     Logger logger,
