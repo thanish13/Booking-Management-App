@@ -1,3 +1,3 @@
 Flight Management App
 
-A spring boot application that handles all the booking of flight tickets.
+A modern, scalable Flight Management System built to streamline airline operations, passenger bookings, and flight scheduling. Designed with a modular architecture for easy integration into enterprise systems or open-source projects.
