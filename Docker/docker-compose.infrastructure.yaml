@@ -229,7 +229,7 @@ services:
     depends_on:
       - prometheus
     ports:
-      - "3030:3030"
+      - "3030:3000"
     volumes:
       - ./../configs/grafana/provisioning:/etc/grafana/provisioning
       - ./../configs/grafana/dashboards:/var/lib/grafana/dashboards
