@@ -16,7 +16,7 @@
     </properties>
 
     <modules>
-        <module>Booking-Foundation</module>
+        <module>RA-Foundation</module>
         <module>Booking-Gateway</module>
         <module>Booking-Server</module>
         <module>Flight-Server</module>
