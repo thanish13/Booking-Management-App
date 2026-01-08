@@ -17,7 +17,7 @@
 
     <modules>
         <module>RA-Foundation</module>
-        <module>Booking-Gateway</module>
+        <module>RA-Gateway</module>
         <module>Booking-Server</module>
         <module>Flight-Server</module>
         <module>Passenger-Server</module>

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.t13.app</groupId>
-    <artifactId>Booking-Gateway</artifactId>
+    <artifactId>RA-Gateway</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
